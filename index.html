@@ -1,0 +1,338 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>GhumneChale — Discover Your Next Adventure</title>
+  <meta name="description" content="Plan your perfect trip with GhumneChale. Day-by-day itineraries, cultural insights, animated roadmaps, and seamless travel planning." />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=Playfair+Display:ital,wght@0,400;0,700;0,900;1,400&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" />
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='80' font-size='80'>✈️</text></svg>" />
+  <link rel="stylesheet" href="css/main.css" />
+  <link rel="stylesheet" href="css/hero.css" />
+  <link rel="stylesheet" href="css/search.css" />
+  <link rel="stylesheet" href="css/sections.css" />
+</head>
+<body>
+
+<nav class="nav" id="mainNav">
+  <div class="nav-inner">
+    <a href="#" class="nav-logo" id="navLogo">
+      <svg width="28" height="28" viewBox="0 0 28 28" fill="none"><circle cx="14" cy="14" r="13" stroke="url(#nlg)" stroke-width="2"/><path d="M7 14 Q14 6 21 14 Q14 22 7 14Z" fill="url(#nlg)" opacity="0.9"/><defs><linearGradient id="nlg" x1="0" y1="0" x2="28" y2="28"><stop stop-color="#F5A623"/><stop offset="1" stop-color="#00C9A7"/></linearGradient></defs></svg>
+      <span>GhumneChale</span>
+    </a>
+    <div class="nav-links">
+      <a href="#itinerary-section" class="nav-link">Itinerary</a>
+      <a href="#roadmap-section" class="nav-link">Roadmap</a>
+      <a href="#transport-section" class="nav-link">Transport</a>
+      <a href="#budget-section" class="nav-link">Budget</a>
+      <a href="#food-section" class="nav-link">Food</a>
+    </div>
+    <button class="nav-cta" id="navCtaBtn">Plan My Trip</button>
+  </div>
+</nav>
+
+<!-- HERO -->
+<section class="hero" id="heroSection">
+  <div class="hero-bg">
+    <div class="hero-bg-img" id="heroBgImg"></div>
+    <div class="hero-overlay"></div>
+    <canvas class="hero-particles" id="heroCanvas"></canvas>
+  </div>
+  <div class="hero-content" id="heroContent">
+    <div class="hero-eyebrow" id="heroEyebrow"><span class="eyebrow-dot"></span>The World Is Calling</div>
+    <h1 class="hero-headline" id="heroHeadline">
+      <span class="hl-line">Every Journey</span>
+      <span class="hl-line hl-accent">Begins With</span>
+      <span class="hl-line">A Single Step.</span>
+    </h1>
+    <p class="hero-sub" id="heroSub">Day-by-day itineraries. Animated roadmaps. Real-time culture insights. Your perfect trip, curated.</p>
+
+    <!-- Search Card -->
+    <div class="search-card" id="searchCard">
+      <div class="search-row-top">
+        <div class="search-field">
+          <label class="sf-label">Where to?</label>
+          <div class="sf-wrap">
+            <svg class="sf-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0118 0z"/><circle cx="12" cy="10" r="3"/></svg>
+            <input type="text" id="searchCity" class="sf-input" placeholder="City or destination..." autocomplete="off" />
+            <div class="autocomplete-dropdown" id="autocompleteDropdown"></div>
+          </div>
+        </div>
+        <div class="search-field search-field-sm">
+          <label class="sf-label">Days</label>
+          <div class="sf-wrap">
+            <svg class="sf-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="4" width="18" height="18" rx="2"/><line x1="3" y1="10" x2="21" y2="10"/><line x1="8" y1="2" x2="8" y2="6"/><line x1="16" y1="2" x2="16" y2="6"/></svg>
+            <input type="number" id="searchDays" class="sf-input" placeholder="2" min="1" max="14" value="2" />
+          </div>
+        </div>
+        <div class="search-field search-field-sm">
+          <label class="sf-label">Travel Date</label>
+          <div class="sf-wrap">
+            <svg class="sf-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><polyline points="12,6 12,12 16,14"/></svg>
+            <input type="date" id="searchDate" class="sf-input" />
+          </div>
+        </div>
+      </div>
+
+      <div class="search-row-prefs">
+        <div class="pref-group">
+          <span class="pref-label">Budget</span>
+          <div class="pref-pills" id="budgetPills">
+            <button class="pref-pill active" data-value="budget">🎒 Budget</button>
+            <button class="pref-pill" data-value="mid">⭐ Mid-Range</button>
+            <button class="pref-pill" data-value="luxury">💎 Luxury</button>
+          </div>
+        </div>
+        <div class="pref-group">
+          <span class="pref-label">Interests</span>
+          <div class="pref-pills" id="interestPills">
+            <button class="pref-pill active" data-value="history">🏛 History</button>
+            <button class="pref-pill active" data-value="food">🍜 Food</button>
+            <button class="pref-pill" data-value="nature">🌿 Nature</button>
+            <button class="pref-pill" data-value="shopping">🛍 Shopping</button>
+            <button class="pref-pill" data-value="culture">🎭 Culture</button>
+            <button class="pref-pill" data-value="adventure">⛰ Adventure</button>
+          </div>
+        </div>
+        <div class="pref-group">
+          <span class="pref-label">Transport</span>
+          <div class="pref-pills" id="transportPills">
+            <button class="pref-pill active" data-value="public">🚇 Public</button>
+            <button class="pref-pill" data-value="cab">🚖 Cab</button>
+            <button class="pref-pill" data-value="walk">🚶 Walk</button>
+            <button class="pref-pill" data-value="mixed">🔀 Mixed</button>
+          </div>
+        </div>
+      </div>
+
+      <button class="search-submit" id="searchSubmit">
+        <span>Plan My Adventure</span>
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" width="18" height="18"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12,5 19,12 12,19"/></svg>
+        <div class="submit-loader hidden" id="submitLoader"></div>
+      </button>
+    </div>
+
+    <div class="popular-chips" id="popularChips">
+      <span class="chips-label">🇮🇳 India:</span>
+      <button class="dest-chip" data-city="delhi">🏛️ Delhi</button>
+      <button class="dest-chip" data-city="jaipur">🌸 Jaipur</button>
+      <button class="dest-chip" data-city="udaipur">🏯 Udaipur</button>
+      <button class="dest-chip" data-city="mumbai">🌊 Mumbai</button>
+      <button class="dest-chip" data-city="goa">🏖️ Goa</button>
+      <button class="dest-chip" data-city="rishikesh">🕉️ Rishikesh</button>
+      <button class="dest-chip" data-city="manali">🏔️ Manali</button>
+      <button class="dest-chip" data-city="ladakh">🌄 Ladakh</button>
+      <button class="dest-chip" data-city="kerala">🌴 Kerala</button>
+    </div>
+    <div class="popular-chips" id="popularChipsIntl">
+      <span class="chips-label">🌍 World:</span>
+      <button class="dest-chip" data-city="paris">🗼 Paris</button>
+      <button class="dest-chip" data-city="rome">🏛️ Rome</button>
+      <button class="dest-chip" data-city="switzerland">🏔️ Switzerland</button>
+      <button class="dest-chip" data-city="tokyo">🌸 Tokyo</button>
+      <button class="dest-chip" data-city="bangkok">🛕 Bangkok</button>
+      <button class="dest-chip" data-city="dubai">✨ Dubai</button>
+      <button class="dest-chip" data-city="hawaii">🌺 Hawaii</button>
+      <button class="dest-chip" data-city="alaska">🌌 Alaska</button>
+    </div>
+
+  </div>
+  <div class="scroll-cue"><span>Scroll to explore</span><div class="scroll-line"></div></div>
+</section>
+
+<!-- QUOTE STRIP -->
+<div class="quote-strip">
+  <div class="quote-track" id="quoteTrack">
+    <span>"Not all those who wander are lost." — Tolkien</span><span class="qs-dot">✦</span>
+    <span>"The world is a book. Those who do not travel read only one page." — St. Augustine</span><span class="qs-dot">✦</span>
+    <span>"Travel far enough, you meet yourself." — David Mitchell</span><span class="qs-dot">✦</span>
+    <span>"To travel is to live." — Hans Christian Andersen</span><span class="qs-dot">✦</span>
+    <span>"Once a year, go somewhere you've never been before." — Dalai Lama</span><span class="qs-dot">✦</span>
+    <span>"The journey not the arrival matters." — T.S. Eliot</span><span class="qs-dot">✦</span>
+    <span>"Not all those who wander are lost." — Tolkien</span><span class="qs-dot">✦</span>
+    <span>"The world is a book. Those who do not travel read only one page." — St. Augustine</span><span class="qs-dot">✦</span>
+  </div>
+</div>
+
+<!-- CITY RESULT (hidden until search) -->
+<div id="cityResult" class="city-result hidden">
+
+  <!-- CITY OVERVIEW -->
+  <section class="city-overview" id="cityOverviewSection">
+    <div class="cov-hero" id="covHero">
+      <div class="cov-img" id="covImg"></div>
+      <div class="cov-overlay"></div>
+      <div class="cov-text">
+        <div class="cov-flag" id="covFlag"></div>
+        <h2 class="cov-city" id="covCity"></h2>
+        <p class="cov-tagline" id="covTagline"></p>
+        <div class="cov-stats" id="covStats"></div>
+      </div>
+    </div>
+    <div class="cov-body">
+      <div class="cov-left">
+        <div class="cov-section"><h3 class="cov-heading">About the City</h3><p class="cov-para" id="covHistory"></p></div>
+        <div class="cov-section"><h3 class="cov-heading">Why Visit?</h3><ul class="cov-why" id="covWhy"></ul></div>
+        <div class="cov-section"><h3 class="cov-heading">Cultural Highlights</h3><div class="cov-culture-grid" id="covCultureGrid"></div></div>
+      </div>
+      <div class="cov-right">
+        <div class="weather-card" id="weatherCard">
+          <div class="wc-header"><span class="wc-title">☁️ Live Weather</span><span class="wc-loc" id="wcLocation"></span></div>
+          <div class="wc-main" id="wcMain"><div class="wc-loading">Fetching weather…</div></div>
+          <div class="wc-forecast" id="wcForecast"></div>
+        </div>
+        <div class="city-quote-card">
+          <span class="cqc-mark">"</span>
+          <p class="cqc-text" id="cqcText"></p>
+          <span class="cqc-author" id="cqcAuthor"></span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ITINERARY -->
+  <section class="section-wrapper" id="itinerary-section">
+    <div class="section-header">
+      <div class="section-eyebrow">Your Journey</div>
+      <h2 class="section-title">Day-by-Day Itinerary</h2>
+      <p class="section-sub" id="itinerarySub"></p>
+    </div>
+    <div class="day-tabs" id="dayTabs"></div>
+    <div class="itinerary-panels" id="itineraryPanels"></div>
+  </section>
+
+  <!-- ROADMAP -->
+  <section class="section-wrapper section-dark" id="roadmap-section">
+    <div class="section-header">
+      <div class="section-eyebrow">Navigate With Ease</div>
+      <h2 class="section-title">Your Animated Roadmap</h2>
+      <p class="section-sub">Watch Tiki, your travel guide, navigate the city stop by stop.</p>
+    </div>
+    <div class="roadmap-container">
+      <div class="roadmap-map" id="roadmapMap"></div>
+      <div class="roadmap-panel">
+        <div class="roadmap-day-tabs" id="roadmapDayTabs"></div>
+        <div class="roadmap-stops" id="roadmapStops"></div>
+        <div class="roadmap-guide-tip" id="roadmapGuideTip">
+          <div class="guide-char">🎒</div>
+          <p id="guideTipText">Click "Start Journey" to animate your route!</p>
+        </div>
+        <button class="roadmap-start-btn" id="roadmapStartBtn">▶ Start Journey</button>
+      </div>
+    </div>
+  </section>
+
+  <!-- TRANSPORT -->
+  <section class="section-wrapper" id="transport-section">
+    <div class="section-header">
+      <div class="section-eyebrow">Get Around</div>
+      <h2 class="section-title">Transport Options</h2>
+      <p class="section-sub" id="transportSub"></p>
+    </div>
+    <div class="transport-filters" id="transportFilters"></div>
+    <div class="transport-grid" id="transportGrid"></div>
+    <div class="booking-banner" id="bookingBanner"></div>
+  </section>
+
+  <!-- BUDGET -->
+  <section class="section-wrapper section-dark" id="budget-section">
+    <div class="section-header">
+      <div class="section-eyebrow">Plan Your Finances</div>
+      <h2 class="section-title">Budget Breakdown</h2>
+    </div>
+    <div class="budget-layout">
+      <div class="budget-chart-wrap">
+        <canvas id="budgetChart" width="300" height="300"></canvas>
+        <div class="budget-chart-center" id="budgetChartCenter"></div>
+      </div>
+      <div class="budget-details">
+        <div class="budget-level-tabs" id="budgetLevelTabs">
+          <button class="blt active" data-level="budget">Budget</button>
+          <button class="blt" data-level="mid">Mid-Range</button>
+          <button class="blt" data-level="luxury">Luxury</button>
+        </div>
+        <div class="budget-rows" id="budgetRows"></div>
+        <div class="budget-total" id="budgetTotal"></div>
+        <div class="budget-tips" id="budgetTips"></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- FOOD -->
+  <section class="section-wrapper" id="food-section">
+    <div class="section-header">
+      <div class="section-eyebrow">Taste the City</div>
+      <h2 class="section-title">Food &amp; Experiences</h2>
+    </div>
+    <div class="food-filters" id="foodFilters">
+      <button class="food-filter-btn active" data-filter="all">All</button>
+      <button class="food-filter-btn" data-filter="restaurant">Restaurants</button>
+      <button class="food-filter-btn" data-filter="cafe">Cafés</button>
+      <button class="food-filter-btn" data-filter="street">Street Food</button>
+    </div>
+    <div class="food-grid" id="foodGrid"></div>
+  </section>
+
+</div><!-- /cityResult -->
+
+<!-- FLOATING TOURIST GUIDE -->
+<div class="tourist-float" id="touristFloat">
+  <div class="tf-bubble hidden" id="tfBubble"><p id="tfText">👋 Hi! I'm Tiki. Search a destination to start!</p></div>
+  <div class="tf-char" id="tfChar">
+    <svg width="56" height="72" viewBox="0 0 56 72" fill="none">
+      <ellipse cx="28" cy="14" rx="16" ry="4.5" fill="#F5A623"/>
+      <rect x="16" y="7" width="24" height="9" rx="5" fill="#F5A623"/>
+      <circle cx="28" cy="24" r="11" fill="#FDDCB5"/>
+      <circle cx="24" cy="22" r="2" fill="#1a1a2e"/><circle cx="32" cy="22" r="2" fill="#1a1a2e"/>
+      <circle cx="24.8" cy="21.2" r="0.8" fill="white"/><circle cx="32.8" cy="21.2" r="0.8" fill="white"/>
+      <path d="M23 28 Q28 32 33 28" stroke="#c0763a" stroke-width="1.5" fill="none" stroke-linecap="round"/>
+      <rect x="16" y="35" width="24" height="20" rx="4" fill="#00C9A7"/>
+      <rect x="6" y="37" width="11" height="14" rx="3" fill="#F5A623"/>
+      <line x1="6" y1="39" x2="16" y2="42" stroke="#d48e1a" stroke-width="1.2"/>
+      <line x1="16" y1="39" x2="9" y2="50" stroke="#FDDCB5" stroke-width="4.5" stroke-linecap="round"/>
+      <line x1="40" y1="39" x2="48" y2="47" stroke="#FDDCB5" stroke-width="4.5" stroke-linecap="round"/>
+      <g class="tiki-legs" id="tikiLegs">
+        <line x1="22" y1="55" x2="20" y2="69" stroke="#2c3e8c" stroke-width="5.5" stroke-linecap="round"/>
+        <line x1="34" y1="55" x2="36" y2="69" stroke="#2c3e8c" stroke-width="5.5" stroke-linecap="round"/>
+      </g>
+      <ellipse cx="20" cy="70" rx="4.5" ry="2.5" fill="#1a1a2e"/>
+      <ellipse cx="36" cy="70" rx="4.5" ry="2.5" fill="#1a1a2e"/>
+    </svg>
+    <div class="tf-pulse"></div>
+  </div>
+</div>
+
+<!-- FOOTER -->
+<footer class="footer">
+  <div class="footer-inner">
+    <div class="footer-brand">
+      <div class="nav-logo"><svg width="24" height="24" viewBox="0 0 28 28" fill="none"><circle cx="14" cy="14" r="13" stroke="url(#flg)" stroke-width="2"/><path d="M7 14 Q14 6 21 14 Q14 22 7 14Z" fill="url(#flg)" opacity="0.9"/><defs><linearGradient id="flg" x1="0" y1="0" x2="28" y2="28"><stop stop-color="#F5A623"/><stop offset="1" stop-color="#00C9A7"/></linearGradient></defs></svg><span>GhumneChale</span></div>
+      <p>Your world. Your way. One journey at a time.</p>
+    </div>
+    <div class="footer-links">
+      <div class="fl-col"><strong>Destinations</strong><a href="#">India</a><a href="#">Asia</a><a href="#">Europe</a><a href="#">Americas</a></div>
+      <div class="fl-col"><strong>Plan</strong><a href="#">Itinerary Builder</a><a href="#">Budget Planner</a><a href="#">Transport Guide</a></div>
+      <div class="fl-col"><strong>About</strong><a href="#">How it Works</a><a href="#">Contact</a></div>
+    </div>
+  </div>
+  <div class="footer-bottom"><span>© 2026 GhumneChale. Made with ❤️ for wanderers.</span><span>Powered by OpenWeatherMap · Leaflet · Unsplash</span></div>
+</footer>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
+<script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+<script src="config.js"></script>
+<script src="js/data/cities.js"></script>
+<script src="js/data/itinerary-builder.js"></script>
+<script src="js/data/transport-data.js"></script>
+<script src="js/api/weather.js"></script>
+<script src="js/animations/animations.js"></script>
+<script src="js/components/ui.js"></script>
+<script src="js/components/roadmap.js"></script>
+<script src="js/app.js"></script>
+</body>
+</html>
