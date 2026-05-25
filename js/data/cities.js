@@ -452,6 +452,114 @@ const CITIES = {
       summary: 'Alaska is vast — small planes (bush planes) are the primary transport between remote areas. In cities, rental cars and taxis. The Alaska Railroad connects Anchorage to Fairbanks.',
       options: ['Bush Plane','Rental Car','Alaska Railroad','Ferry (Marine Highway)','Dogsled','Snowmobile']
     }
+  },
+  amritsar: {
+    name: 'Amritsar', country: 'India', flag: '🇮🇳',
+    lat: 31.6340, lon: 74.8723,
+    tagline: 'The soul of Punjab — faith, food & freedom',
+    image: 'images/amritsar.png',
+    history: 'Amritsar, founded in 1577 by Guru Ram Das, is the spiritual capital of Sikhism and home to the magnificent Golden Temple (Harmandir Sahib). The city carries a complex history — from the Jallianwala Bagh massacre of 1919 to the Wagah Border ceremony — and is celebrated for the warmest Punjabi hospitality and arguably India\'s most iconic street food.',
+    why: ['Golden Temple — the most visited place in India','Wagah Border Beating Retreat ceremony at sunset','Jallianwala Bagh — a solemn memorial of history','Amritsar\'s legendary kulcha, lassi & langar food'],
+    culture: [
+      {icon:'🛕', label:'Golden Temple', desc:'Harmandir Sahib — 24/7 open to all, serene and stunning'},
+      {icon:'🏛️', label:'Jallianwala Bagh', desc:'Garden memorial of the 1919 British massacre'},
+      {icon:'🚩', label:'Wagah Border', desc:'Daily military Beating Retreat ceremony at India-Pakistan border'},
+      {icon:'🏰', label:'Gobindgarh Fort', desc:'18th-century fort housing a rich cultural experience'},
+    ],
+    quote: {text:'The Golden Temple is not just a place of worship — it is a place of peace for all humanity.', author:'— Unknown'},
+    bestMonth: 'Oct – Mar', language: 'Punjabi / Hindi', currency: 'INR',
+    food: [
+      {name:'Kesar Da Dhaba', type:'restaurant', desc:'Amritsar\'s most legendary dal makhani since 1916', price:'₹', emoji:'🍲'},
+      {name:'Bharawan Da Dhaba', type:'restaurant', desc:'Iconic Punjabi thali and stuffed kulchas since 1912', price:'₹', emoji:'🫓'},
+      {name:'Golden Temple Langar', type:'street', desc:'Free community meal served 24/7 to 100,000 people daily', price:'Free', emoji:'🙏'},
+      {name:'Gurdas Ram Jalebi', type:'street', desc:'Legendary hot jalebis made since the 1880s', price:'₹', emoji:'🍩'},
+      {name:'Bros Dhaba', type:'cafe', desc:'Amritsar\'s famous lassi spot near Hall Bazaar', price:'₹', emoji:'🥛'},
+    ],
+    transport: {
+      summary: 'Amritsar is compact. Auto-rickshaws and cycle-rickshaws cover the heritage area. E-rickshaws are eco-friendly and abundant near the Golden Temple.',
+      options: ['Auto', 'Cycle Rickshaw', 'E-Rickshaw', 'Cab', 'Walk']
+    }
+  },
+  ludhiana: {
+    name: 'Ludhiana', country: 'India', flag: '🇮🇳',
+    lat: 30.9010, lon: 75.8573,
+    tagline: 'Punjab\'s industrial heart with a golden cultural soul',
+    image: 'images/ludhiana.png',
+    history: 'Ludhiana, Punjab\'s largest city, is India\'s hosiery and bicycle manufacturing capital, earning it the nickname "Manchester of India." Situated on the Sutlej River, it is a booming commercial hub with a vibrant food scene, rich Punjabi folk culture, and proximity to historical battlefields.',
+    why: ['Largest city in Punjab — vibrant Punjabi culture','Punjab Agricultural University — stunning campus','Nehru Rose Garden — North India\'s largest rose garden','Authentic Punjabi cuisine and street food'],
+    culture: [
+      {icon:'🌹', label:'Nehru Rose Garden', desc:'North India\'s largest rose garden with 17,000+ varieties'},
+      {icon:'🏛️', label:'Punjab Agricultural University', desc:'One of Asia\'s best agricultural universities — sprawling green campus'},
+      {icon:'🎭', label:'Guru Nanak Bhawan', desc:'Cultural complex with Punjabi art and heritage exhibitions'},
+      {icon:'⚔️', label:'Lodhi Fort (Phillaur)', desc:'19th-century fort near the Sutlej — day trip from the city'},
+    ],
+    quote: {text:'Ludhiana is the engine that drives Punjab forward.', author:'— Unknown'},
+    bestMonth: 'Oct – Mar', language: 'Punjabi / Hindi', currency: 'INR',
+    food: [
+      {name:'Honest Restaurant', type:'restaurant', desc:'Ludhiana institution — legendary Punjabi thali and kadhi', price:'₹', emoji:'🍛'},
+      {name:'Amritsari Kulcha Corner', type:'street', desc:'Crispy stuffed kulchas with chole and white butter', price:'₹', emoji:'🫓'},
+      {name:'Galaxy Hotel Restaurant', type:'restaurant', desc:'Classic Punjabi butter chicken and dal makhani', price:'₹₹', emoji:'🍗'},
+      {name:'Giani\'s Di Hatti', type:'street', desc:'Famous lassi and falooda since decades — thick and creamy', price:'₹', emoji:'🥛'},
+      {name:'Civil Lines Street Stalls', type:'street', desc:'Aloo tikki chaat, papdi chaat, and kulfi', price:'₹', emoji:'🥙'},
+    ],
+    transport: {
+      summary: 'Ludhiana is well-connected by local auto-rickshaws, city buses, and app cabs. The railway station connects to Delhi, Amritsar, and Chandigarh.',
+      options: ['Auto', 'Bus', 'Cab', 'Cycle Rickshaw', 'Train']
+    }
+  },
+  jalandhar: {
+    name: 'Jalandhar', country: 'India', flag: '🇮🇳',
+    lat: 31.3260, lon: 75.5762,
+    tagline: 'Ancient city of sports, shrines & Punjabi spirit',
+    image: 'images/jalandhar.png',
+    history: 'Jalandhar is one of Punjab\'s oldest cities — mentioned in the ancient Mahabharata as the kingdom of Jalandhara. Today it is India\'s sports goods manufacturing capital (producing 70% of the country\'s sporting equipment), has a significant NRI diaspora, and is home to important Sikh and Devi shrines.',
+    why: ['Devi Talab Mandir — ancient temple with sacred tank','Sports goods market — best prices on cricket, hockey & football','Wonderland Theme Park — great family destination','Proximity to Kartarpur Corridor (Guru Nanak\'s final home)'],
+    culture: [
+      {icon:'🛕', label:'Devi Talab Mandir', desc:'Ancient temple with a sacred tank — a major pilgrimage site'},
+      {icon:'🏑', label:'Sports Goods Market', desc:'Jalandhar makes 70% of India\'s sports equipment — buy direct'},
+      {icon:'🕌', label:'Imam Nasir Mosque', desc:'Historic mosque from Mughal era in the old city'},
+      {icon:'🌿', label:'Company Bagh', desc:'Historic 19th-century garden — peaceful retreat in the city centre'},
+    ],
+    quote: {text:'Jalandhar is where Punjab\'s ancient roots meet its modern ambition.', author:'— Unknown'},
+    bestMonth: 'Oct – Mar', language: 'Punjabi / Hindi', currency: 'INR',
+    food: [
+      {name:'Bhola Dhaba', type:'restaurant', desc:'Legendary Jalandhar dhaba — saag, makki di roti & lassi', price:'₹', emoji:'🌽'},
+      {name:'Novelty Sweets', type:'street', desc:'Famous for pinni, barfi, and Punjabi mithai since 1945', price:'₹', emoji:'🍬'},
+      {name:'Bade Bhaiya Da Dhaba', type:'street', desc:'Street-side Punjabi comfort food — rajma chawal & kadhi', price:'₹', emoji:'🍲'},
+      {name:'G.T. Road Dhabas', type:'street', desc:'Classic highway dhabas with tandoori chicken & parathas', price:'₹', emoji:'🔥'},
+      {name:'Café Regal', type:'cafe', desc:'Jalandhar\'s popular café for snacks and coffee', price:'₹₹', emoji:'☕'},
+    ],
+    transport: {
+      summary: 'Jalandhar has good connectivity via NH-44. Auto-rickshaws and city buses are the main local transport. The railway junction connects to all major Punjab cities.',
+      options: ['Auto', 'Bus', 'Cab', 'Train', 'Cycle Rickshaw']
+    }
+  },
+  agra: {
+    name: 'Agra', country: 'India', flag: '🇮🇳',
+    lat: 27.1767, lon: 78.0081,
+    tagline: 'Home of the Taj Mahal — love immortalised in marble',
+    image: 'https://images.unsplash.com/photo-1564507592333-c60657eea523?w=1200&q=80',
+    history: 'Agra was the capital of the Mughal Empire under Akbar, Jahangir and Shah Jahan. The city is home to three UNESCO World Heritage Sites — the Taj Mahal, Agra Fort, and Fatehpur Sikri — making it one of the most historically significant cities in all of Asia. The Taj Mahal, completed in 1653, is considered the world\'s greatest monument to love.',
+    why: ['Taj Mahal — one of the 7 Wonders of the World','Agra Fort — the Mughal Red Fort on the Yamuna','Fatehpur Sikri — abandoned Mughal ghost city','Agra Petha & Mughal cuisine — world-class street food'],
+    culture: [
+      {icon:'🏛️', label:'Taj Mahal', desc:'Shah Jahan\'s marble monument to eternal love — a UNESCO wonder'},
+      {icon:'🏰', label:'Agra Fort', desc:'Massive Mughal Red Fort — UNESCO World Heritage Site'},
+      {icon:'🕌', label:'Fatehpur Sikri', desc:'Abandoned Mughal capital — ghost city frozen in 1585'},
+      {icon:'🕌', label:'Itmad-ud-Daulah', desc:'The Baby Taj — an exquisite proto-Taj Mahal across the Yamuna'},
+    ],
+    quote: {text:'The Taj Mahal rises above the banks of the river like a solitary tear on the cheek of time.', author:'— Rabindranath Tagore'},
+    bestMonth: 'Oct – Mar', language: 'Hindi / Braj Bhasha', currency: 'INR',
+    food: [
+      {name:'Pinch of Spice', type:'restaurant', desc:'Agra\'s most celebrated restaurant — Mughlai & North Indian', price:'₹₹₹', emoji:'🍛'},
+      {name:'Mama Chicken', type:'street', desc:'Famous street stall for tandoori chicken near Sadar Bazaar', price:'₹', emoji:'🍗'},
+      {name:'Shankara Vegis', type:'restaurant', desc:'Best dal makhani and stuffed paratha near the Taj', price:'₹', emoji:'🫓'},
+      {name:'Paliwal Restaurant', type:'restaurant', desc:'Iconic Agra institution — petha, chaats & Mughlai curries', price:'₹₹', emoji:'🍬'},
+      {name:'Cafe Sheroes Hangout', type:'cafe', desc:'Acid attack survivors\' café — inspiring story, great coffee', price:'₹₹', emoji:'☕'},
+    ],
+    transport: {
+      summary: 'Agra is best explored by pre-paid autos and cycle-rickshaws near the Taj. Tuk-tuks and cabs cover longer routes. Well connected by train from Delhi (2 hrs on Gatimaan Express).',
+      options: ['Auto', 'Cycle Rickshaw', 'Cab', 'E-Rickshaw', 'Train']
+    }
   }
 };
 

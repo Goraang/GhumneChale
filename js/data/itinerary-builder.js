@@ -457,6 +457,122 @@ const ITINERARY_DB = {
         ]
       }
     ]
+  },
+  amritsar: {
+    days: [
+      {
+        theme: 'Golden Temple & Heritage',
+        color: '#F59E0B',
+        stops: [
+          {time:'4:30 AM', place:'Golden Temple (Dawn)', emoji:'🛕', desc:'Arrive before sunrise — the temple reflected in the sarovar at dawn is transcendent', lat:31.6200, lon:74.8765, type:'monument'},
+          {time:'7:00 AM', place:'Golden Temple Langar', emoji:'🙏', desc:'Free community kitchen serving 100,000 people daily — a humbling experience', lat:31.6200, lon:74.8765, type:'food'},
+          {time:'9:30 AM', place:'Jallianwala Bagh', emoji:'🏛️', desc:'Solemn garden memorial of the 1919 British massacre — deeply moving', lat:31.6205, lon:74.8793, type:'culture'},
+          {time:'11:00 AM', place:'Gobindgarh Fort', emoji:'🏰', desc:'18th-century fort with light & sound show, weapons museum & cultural acts', lat:31.6283, lon:74.8660, type:'monument'},
+          {time:'1:00 PM', place:'Kesar Da Dhaba', emoji:'🍲', desc:'Amritsar\'s most legendary dal makhani & maa di dal since 1916', lat:31.6194, lon:74.8776, type:'food'},
+          {time:'3:00 PM', place:'Hall Bazaar', emoji:'🛍️', desc:'Amritsar\'s famous shopping street — Punjabi juttis, phulkari dupattas & papad', lat:31.6239, lon:74.8756, type:'market'},
+          {time:'5:00 PM', place:'Golden Temple (Sunset)', emoji:'✨', desc:'Return for the palki ceremony — sacred scripture processionally carried to rest', lat:31.6200, lon:74.8765, type:'monument'},
+        ]
+      },
+      {
+        theme: 'Wagah Border & Kulcha Trail',
+        color: '#EF4444',
+        stops: [
+          {time:'8:00 AM', place:'Bharawan Da Dhaba', emoji:'🫓', desc:'Amritsari kulcha with chole and white butter — Punjabi breakfast royale', lat:31.6192, lon:74.8763, type:'food'},
+          {time:'9:30 AM', place:'Partition Museum', emoji:'📜', desc:'World\'s first museum dedicated to the 1947 Partition — powerful and rare', lat:31.6239, lon:74.8756, type:'culture'},
+          {time:'11:30 AM', place:'Sri Harmandir Sahib Museum', emoji:'🎨', desc:'History of Sikhism and the Golden Temple through art and artefacts', lat:31.6200, lon:74.8765, type:'culture'},
+          {time:'1:30 PM', place:'Gurdas Ram Jalebi', emoji:'🍩', desc:'Crispy spiralling hot jalebis made since the 1880s near the temple', lat:31.6188, lon:74.8771, type:'food'},
+          {time:'3:30 PM', place:'Wagah Border', emoji:'🚩', desc:'Arrive early for the electrifying daily Beating Retreat ceremony — pure spectacle', lat:31.6049, lon:74.5760, type:'landmark'},
+          {time:'7:30 PM', place:'Makhan Fish & Chicken Corner', emoji:'🐟', desc:'Amritsar\'s famous fish fry spot — a must after the border ceremony', lat:31.6200, lon:74.8700, type:'food'},
+        ]
+      }
+    ]
+  },
+  ludhiana: {
+    days: [
+      {
+        theme: 'Gardens, Campus & Culture',
+        color: '#10B981',
+        stops: [
+          {time:'8:30 AM', place:'Nehru Rose Garden', emoji:'🌹', desc:'Asia\'s largest rose garden — 17,000+ varieties of roses in bloom', lat:30.9148, lon:75.8491, type:'nature'},
+          {time:'10:30 AM', place:'Punjab Agricultural University', emoji:'🏛️', desc:'One of Asia\'s finest agricultural campuses — beautiful green grounds and museum', lat:30.9106, lon:75.8032, type:'culture'},
+          {time:'1:00 PM', place:'Honest Restaurant', emoji:'🍛', desc:'Ludhiana\'s most beloved Punjabi thali — rich, hearty and authentic', lat:30.9010, lon:75.8400, type:'food'},
+          {time:'3:00 PM', place:'Guru Nanak Stadium', emoji:'🏟️', desc:'Historic stadium and centre of sports culture in Ludhiana', lat:30.8997, lon:75.8573, type:'landmark'},
+          {time:'4:30 PM', place:'Guru Nanak Bhawan', emoji:'🎭', desc:'Cultural complex — Punjabi art, exhibitions and folk music performances', lat:30.9036, lon:75.8481, type:'culture'},
+          {time:'7:00 PM', place:'Giani\'s Di Hatti', emoji:'🥛', desc:'Thick, creamy Punjabi lassi — the best in Ludhiana bar none', lat:30.9010, lon:75.8500, type:'food'},
+        ]
+      },
+      {
+        theme: 'Markets, Heritage & Street Food',
+        color: '#8B5CF6',
+        stops: [
+          {time:'9:00 AM', place:'Chaura Bazaar', emoji:'🛍️', desc:'Ludhiana\'s oldest and busiest market — hosiery, textiles and local goods', lat:30.9000, lon:75.8520, type:'market'},
+          {time:'11:00 AM', place:'Lodhi Fort, Phillaur', emoji:'🏯', desc:'19th-century Sikh-era fort on the Sutlej banks — scenic day trip', lat:31.0173, lon:75.7866, type:'monument'},
+          {time:'1:30 PM', place:'Amritsari Kulcha Corner', emoji:'🫓', desc:'Crispy kulchas stuffed with spiced potatoes — white butter poured generously', lat:30.9010, lon:75.8573, type:'food'},
+          {time:'3:00 PM', place:'Civil Lines', emoji:'🌳', desc:'Colonial-era neighbourhood — heritage buildings and wide tree-lined streets', lat:30.9074, lon:75.8481, type:'landmark'},
+          {time:'5:00 PM', place:'Rakh Bagh Park', emoji:'🌿', desc:'Historic British-era park — evening stroll along serene pathways', lat:30.9152, lon:75.8618, type:'nature'},
+          {time:'7:30 PM', place:'Civil Lines Dhabas', emoji:'🔥', desc:'Tandoori chicken, sarson da saag and makki di roti at sunset', lat:30.9000, lon:75.8450, type:'food'},
+        ]
+      }
+    ]
+  },
+  jalandhar: {
+    days: [
+      {
+        theme: 'Shrines, Sports & Mithai',
+        color: '#E8673A',
+        stops: [
+          {time:'8:00 AM', place:'Devi Talab Mandir', emoji:'🛕', desc:'Ancient Shakti temple with a sacred tank — serene morning prayers and holy dip', lat:31.3205, lon:75.5666, type:'monument'},
+          {time:'10:00 AM', place:'Sports Goods Market', emoji:'🏑', desc:'Buy cricket bats, hockey sticks & footballs straight from the factory — best prices', lat:31.3183, lon:75.5760, type:'market'},
+          {time:'12:00 PM', place:'Bhola Dhaba', emoji:'🌽', desc:'Saag, makki di roti, white butter & lassi — Punjab on a plate', lat:31.3200, lon:75.5700, type:'food'},
+          {time:'2:00 PM', place:'Imam Nasir Mosque', emoji:'🕌', desc:'Beautiful Mughal-era mosque in the old city — exquisite architecture', lat:31.3290, lon:75.5750, type:'monument'},
+          {time:'3:30 PM', place:'Company Bagh', emoji:'🌿', desc:'Victorian-era garden and Botanical Garden — peaceful afternoon stroll', lat:31.3247, lon:75.5691, type:'nature'},
+          {time:'5:30 PM', place:'Novelty Sweets', emoji:'🍬', desc:'Pinni, barfi & Punjabi mithai — legendary sweet shop since 1945', lat:31.3260, lon:75.5762, type:'food'},
+          {time:'7:30 PM', place:'G.T. Road Dhaba Crawl', emoji:'🔥', desc:'Highway dhabas along the Grand Trunk Road — tandoori roti & butter chicken', lat:31.3100, lon:75.5600, type:'food'},
+        ]
+      },
+      {
+        theme: 'Kartarpur & City Heritage',
+        color: '#3B82F6',
+        stops: [
+          {time:'7:00 AM', place:'Kartarpur Corridor', emoji:'🚩', desc:'Pilgrimage to Gurdwara Darbar Sahib — Guru Nanak\'s final resting place in Pakistan', lat:31.4521, lon:75.0176, type:'monument'},
+          {time:'11:00 AM', place:'Gurdwara Chhevin Patshahi', emoji:'🛕', desc:'Historic Sikh gurdwara in Jalandhar city — serene and significant', lat:31.3260, lon:75.5762, type:'monument'},
+          {time:'1:00 PM', place:'Bade Bhaiya Da Dhaba', emoji:'🍲', desc:'Rajma chawal & kadhi pakora — simple, hearty Punjabi soul food', lat:31.3260, lon:75.5800, type:'food'},
+          {time:'3:00 PM', place:'Wonderland Theme Park', emoji:'🎡', desc:'Great family outing with rides, water park and entertainment', lat:31.3400, lon:75.5900, type:'landmark'},
+          {time:'5:30 PM', place:'Pushpa Gujral Science City', emoji:'🔬', desc:'Interactive science museum — great for curious minds of all ages', lat:31.3700, lon:75.6200, type:'culture'},
+          {time:'8:00 PM', place:'Café Regal', emoji:'☕', desc:'Jalandhar\'s favourite café — snacks, coffee and local conversations', lat:31.3260, lon:75.5762, type:'food'},
+        ]
+      }
+    ]
+  },
+  agra: {
+    days: [
+      {
+        theme: 'Taj Mahal & Mughal Grandeur',
+        color: '#E8673A',
+        stops: [
+          {time:'5:30 AM', place:'Taj Mahal (Sunrise)', emoji:'🏛️', desc:'Arrive at dawn — the Taj glows rose-gold at sunrise, crowds minimal and magical', lat:27.1751, lon:78.0421, type:'monument'},
+          {time:'8:00 AM', place:'Mehtab Bagh', emoji:'🌿', desc:'Moonlit garden across the Yamuna — the Taj from behind, without the crowds', lat:27.1850, lon:78.0380, type:'nature'},
+          {time:'10:00 AM', place:'Agra Fort', emoji:'🏰', desc:'UNESCO Red Fort where Shah Jahan was imprisoned — stunning Yamuna river views', lat:27.1795, lon:78.0211, type:'monument'},
+          {time:'1:00 PM', place:'Shankara Vegis Restaurant', emoji:'🫓', desc:'Rooftop Taj view restaurant — stuffed parathas and lassi while gazing at the wonder', lat:27.1740, lon:78.0400, type:'food'},
+          {time:'3:00 PM', place:'Itmad-ud-Daulah', emoji:'🕌', desc:'The Baby Taj — first Mughal structure built entirely in marble, across the Yamuna', lat:27.1942, lon:78.0462, type:'monument'},
+          {time:'5:30 PM', place:'Taj Mahal (Sunset)', emoji:'✨', desc:'Return for sunset — the marble turns a warm amber gold as the light fades', lat:27.1751, lon:78.0421, type:'monument'},
+          {time:'8:00 PM', place:'Paliwal Restaurant', emoji:'🍬', desc:'Dinner and famous Agra petha (white pumpkin sweet) — a city speciality', lat:27.1767, lon:78.0081, type:'food'},
+        ]
+      },
+      {
+        theme: 'Fatehpur Sikri & Bazaars',
+        color: '#8B5CF6',
+        stops: [
+          {time:'8:00 AM', place:'Cafe Sheroes Hangout', emoji:'☕', desc:'Breakfast at the acid attack survivors\' café — empowering and emotional', lat:27.1710, lon:78.0130, type:'food'},
+          {time:'9:30 AM', place:'Fatehpur Sikri', emoji:'🕌', desc:'UNESCO Mughal ghost city 40km away — Buland Darwaza is the world\'s tallest gateway', lat:27.0945, lon:77.6602, type:'monument'},
+          {time:'12:30 PM', place:'Sikandra (Akbar\'s Tomb)', emoji:'🏯', desc:'Emperor Akbar\'s magnificent mausoleum in a deer park on the way back', lat:27.2101, lon:77.9588, type:'monument'},
+          {time:'2:30 PM', place:'Mama Chicken', emoji:'🍗', desc:'Legendary Sadar Bazaar street stall — tandoori chicken and rumali roti', lat:27.1820, lon:78.0010, type:'food'},
+          {time:'4:00 PM', place:'Kinari Bazaar', emoji:'🛍️', desc:'Old city bazaar — marble inlay souvenirs, leather goods & Agra petha shops', lat:27.1820, lon:78.0040, type:'market'},
+          {time:'6:00 PM', place:'Taj Museum', emoji:'🎨', desc:'Small but fascinating museum with original Mughal artefacts inside the Taj complex', lat:27.1751, lon:78.0421, type:'culture'},
+          {time:'8:30 PM', place:'Pinch of Spice', emoji:'🍛', desc:'Agra\'s finest restaurant — dal makhani, butter chicken & Mughlai biryani', lat:27.1900, lon:78.0000, type:'food'},
+        ]
+      }
+    ]
   }
 };
 
