@@ -165,6 +165,34 @@ const TRANSPORT_DATA = {
     booking: {
       cab: { name:'Alaska Railroad', url:'https://www.alaskarailroad.com', note:'Scenic rail pass from Anchorage to Denali — book months ahead in summer' },
     }
+  },
+  amritsar: {
+    summary: 'Amritsar\'s main sites are compact and walkable from the Golden Temple. E-rickshaws and cycle-rickshaws are the best way to explore the old city. Cabs connect to Wagah Border (28km).',
+    featured: ['walk','auto','bike','cab'],
+    booking: {
+      cab: { name:'Ola / Uber', url:'https://www.olacabs.com', note:'Book a cab to Wagah Border — ₹400–600 one way; auto-rickshaws won\'t go that far' },
+    }
+  },
+  ludhiana: {
+    summary: 'Ludhiana is a large spread-out city. Auto-rickshaws handle local trips and city buses cover longer routes. App cabs are reliable. The railway junction connects to Delhi (4.5 hrs), Amritsar (2 hrs) and Chandigarh (1.5 hrs).',
+    featured: ['auto','bus','cab','walk'],
+    booking: {
+      cab: { name:'Ola / Uber', url:'https://www.olacabs.com', note:'Cab hire for the day ₹1,200–1,800 is the most efficient way to see all sights' },
+    }
+  },
+  jalandhar: {
+    summary: 'Jalandhar is well-connected by NH-44. Auto-rickshaws and e-rickshaws cover local areas. The railway junction is one of Punjab\'s busiest. Cabs are ideal for the Kartarpur Corridor (48km away).',
+    featured: ['auto','bus','cab','walk'],
+    booking: {
+      cab: { name:'Ola / Uber', url:'https://www.olacabs.com', note:'Book a cab for the Kartarpur Corridor pilgrimage — ₹800–1,200 roundtrip' },
+    }
+  },
+  agra: {
+    summary: 'Agra\'s key monuments are spread across the city. E-rickshaws and pre-paid autos are the best option near the Taj. Diesel vehicles are banned within 500m of the Taj Mahal to protect the marble. Book a cab for the Fatehpur Sikri day trip (40km).',
+    featured: ['auto','walk','cab','bike'],
+    booking: {
+      cab: { name:'Ola / Uber', url:'https://www.olacabs.com', note:'Book a full-day cab (₹1,500–2,500) for Fatehpur Sikri + Sikandra + monuments tour' },
+    }
   }
 };
 
